@@ -41,12 +41,12 @@
                 <form action="">
                     <div class="row bg-light p-1">
                         <div class="mb-2 col-sm-6 col-md-6">
-                            <select class="form-select" aria-label="Default select example"
-                                            id="tipo-sangre" name="tipo-doc">
-                                            <option selected>Tipo de Documento</option>
-                                            <option value="TI">Tarjeta de identidad</option>
-                                            <option value="CC">Cedula de ciudadania</option>
-                                        </select>
+                            <select class="form-select" aria-label="Default select example" id="tipo-sangre"
+                                name="tipo-doc">
+                                <option selected>Tipo de Documento</option>
+                                <option value="TI">Tarjeta de identidad</option>
+                                <option value="CC">Cedula de ciudadania</option>
+                            </select>
                         </div>
                         <div class="mb-2 col-sm-6 col-md-6 ">
                             <input type="text" placeholder="Numero de Documento" name="num-doc" class="form-control">
@@ -62,86 +62,87 @@
                                 <img src="img/camaraicon.png" alt="" width="30px">
                                 <label for="foto" class="text-center">Subir Foto</label>
                                 <input type="file" id="foto" class="form-control">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=" row bg-light p-1">
-                                <div class=" col-sm-12 col-md-6 ">
-                                    <label for="nombres" class="form-label"> Nombres *</label>
-                                    <input type="text" class="form-control" id="nombres" name="nombres">
+                    <div class=" row bg-light p-1">
+                        <div class=" col-sm-12 col-md-6 ">
+                            <label for="nombres" class="form-label"> Nombres *</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres">
+                        </div>
+                        <div class=" col-sm-12 col-md-6">
+                            <label for="apellidos" class="form-label">Apellidos *</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                        </div>
+                    </div>
+                    <div class="">
+                        <h5 class="mt-2">Informacion de Contacto</h5>
+                        <hr>
+                        <div class="bg-light p-1">
+                            <div class="row bg-light p-1">
+                                <div class=" mb-2 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="dept" placeholder="Departamento"
+                                        name="departamento">
+
                                 </div>
-                                <div class=" col-sm-12 col-md-6">
-                                    <label for="apellidos" class="form-label">Apellidos *</label>
-                                    <input type="text" class="form-control" id="apellidos" name="apellidos">
+                                <div class=" mb-2 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad"
+                                        name="ciudad">
                                 </div>
                             </div>
-                            <div class="">
-                                <h5 class="mt-2">Informacion de Contacto</h5>
-                                <hr>
-                                <div class="bg-light p-1">
-                                    <div class="row  mt-1">
-                                        <div class=" mb-2 col-sm-12">
-                                            <input type="text" class="form-control" id="direccion"
-                                                placeholder="Direccion*" name="direccion">
-                                        </div>
-                                    </div>
-                                    <div class="row bg-light p-1">
-                                        <div class=" mb-2 col-sm-6 col-md-6">
-                                            <input type="text" class="form-control" id="dept"
-                                                placeholder="Departamento" name="departamento">
+                            <div class="row  mt-1">
+                                <div class=" mb-2 col-sm-12">
+                                    <input type="text" class="form-control" id="direccion" placeholder="Direccion*"
+                                        name="direccion">
+                                </div>
+                            </div>
 
-                                        </div>
-                                        <div class=" mb-2 col-sm-6 col-md-6">
-                                            <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" name="ciudad">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="mb-2 col-sm-12">
-                                            <input type="email" class="form-control" id="emailcamper"
-                                                placeholder="Email: pepe@gmail.com" required name="email">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="mb-2 col-sm-6 col-md-6">
-                                            <input type="text" class="form-control" id="telefono" required
-                                                placeholder="Telefono Personal" name="telefono">
-                                        </div>
-                                        <div class="mb-2 col-sm-6 col-md-6">
-                                            <input type="text" class="form-control" id="telefono" required
-                                                placeholder="Telefono Emergencias" name="tel-emergencia">
-                                        </div>
-
-                                    </div>
-
+                            <div class="row">
+                                <div class="mb-2 col-sm-12">
+                                    <input type="email" class="form-control" id="emailcamper"
+                                        placeholder="Email: pepe@gmail.com" required name="email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-2 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="telefono" required
+                                        placeholder="Telefono Personal" name="telefono">
+                                </div>
+                                <div class="mb-2 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="telefono" required
+                                        placeholder="Telefono Emergencias" name="tel-emergencia">
                                 </div>
 
                             </div>
-                            <div>
-                                <h5 class="mt-2">Informacion Medica</h5>
-                                <hr>
-                                <div class="row bg-light p-1">
-                                    <div class="mb-2 col-sm-6 col-md-6">
-                                        <select class="form-select" aria-label="Default select example"
-                                            id="tipo-sangre">
-                                            <option selected>Tipo de Sangre</option>
-                                            <option value="1">O+</option>
-                                            <option value="2">O-</option>
-                                            <option value="3">A-</option>
-                                            <option value="3">A+</option>
-                                            <option value="3">AB+</option>
-                                            <option value="3">AB-</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-2 col-sm-6 col-md-6">
-                                        <input type="text" class="form-control" id="EPS" required placeholder="EPS">
-                                    </div>
 
+                        </div>
 
-                                </div>
-                                <div class="d-grid mx-auto mt-1">
-                                    <input class="btn btn-success" type="submit" value="Guardar">
-                                </div>
+                    </div>
+                    <div>
+                        <h5 class="mt-2">Informacion Medica</h5>
+                        <hr>
+                        <div class="row bg-light p-1">
+                            <div class="mb-2 col-sm-6 col-md-6">
+                                <select class="form-select" aria-label="Default select example" id="tipo-sangre">
+                                    <option selected>Tipo de Sangre</option>
+                                    <option value="1">O+</option>
+                                    <option value="2">O-</option>
+                                    <option value="3">A-</option>
+                                    <option value="3">A+</option>
+                                    <option value="3">AB+</option>
+                                    <option value="3">AB-</option>
+                                </select>
                             </div>
+                            <div class="mb-2 col-sm-6 col-md-6">
+                                <input type="text" class="form-control" id="EPS" required placeholder="EPS">
+                            </div>
+
+
+                        </div>
+                        <div class="d-grid mx-auto mt-1">
+                            <input class="btn btn-success" type="submit" value="Guardar">
+                        </div>
+                    </div>
                 </form>
             </div>
             <!-- TABLA CAMPERS -->
