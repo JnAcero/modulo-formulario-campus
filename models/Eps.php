@@ -43,4 +43,10 @@ class Eps extends Conection{
         $stm->execute();
         return $stm->fetchAll();
     }
+    public function getEpsById($id){
+        $sql = "SELECT eps_nombre FROM eps WHERE id_eps=$id";
+        $stm= $this->cnx->prepare($sql);
+        $stm->execute();
+        return $stm->fetch();
+    }
 }

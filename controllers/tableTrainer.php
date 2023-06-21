@@ -7,6 +7,10 @@ if (isset($_GET['req'])) {
         $trainer->setId_persona($_GET['id_persona']);
         $trainer->setArl(intval( $_GET['id_arl']));
         $trainer->insertTablaTrainer();
+        //$data = $trainer->getTrainerById($_GET['id_persona']);
+        //print_r($data) ;
+
+       // $trainer->insertContactoTrainer();
         echo "<script> document.location='../modulo-formulario-trainner/index.php';</script>";
     }
 }

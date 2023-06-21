@@ -107,5 +107,46 @@ class Trainer extends Conection{
         }
         
     }
+    public function insertContactoTrainer(){
+        try {
+            $sql = "INSERT INTO contacto_trainer(id_trainer, nombre_contacto, telefono_contacto, tipo_locacion_contacto) VALUES (?,?,?,'')";
+            $stm = $this->cnx->prepare($sql);
+            $stm->execute([$this->id_persona, $this->name_contacto, $this->telefono_contacto,]);
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+    }
+
+    public function getTrainers(){
+        try {
+            $sql="SELECT * FROM personas WHERE id_rol=2";
+            $stm=$this->cnx->prepare($sql);
+            $stm->execute();
+            return $stm->fetchAll();
+            
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+    }
+    public function getPersonaById($id){
+        try {
+            $sql="SELECT * FROM personas WHERE id_persona=$id";
+            $stm=$this->cnx->prepare($sql);
+            $stm->execute();
+            return $stm->fetch();
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+    }
+    public function getTrainerById($id){
+        try {
+            $sql="SELECT * FROM trainer WHERE id_persona=$id";
+            $stm=$this->cnx->prepare($sql);
+            $stm->execute();
+            return $stm->fetch();
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+    }
    
 }

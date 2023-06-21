@@ -10,4 +10,10 @@ class Pais extends Conection{
         $stm->execute();
         return $stm->fetchAll();
     }
+    public function getCiudadById($id){
+        $sql = "SELECT ciudad_nombre FROM ciudad WHERE id_ciudad=$id";
+        $stm= $this->cnx->prepare($sql);
+        $stm->execute();
+        return $stm->fetch();
+    }
 }
