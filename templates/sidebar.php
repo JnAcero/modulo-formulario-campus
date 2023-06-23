@@ -29,7 +29,8 @@
         <li>
             <a href="#"><i class='bx bxs-group icon'></i>Programa Academico<i class='bx bx-chevron-right icon-right'></i></a>
             <ul class="side-dropdown">
-                <li><a href="/views/ruta/ruta.php"><i class='bx bxs-user-plus icon'></i>Registrar Rutas</a></li>
+                <li><a href="../views/ruta.php"><i class='bx bxs-user-plus icon'></i>Registrar Rutas</a></li>
+                <li><a href="../views/salones.php"><i class='bx bxs-user-plus icon'></i>Registrar Salon</a></li>
             </ul>
         </li>
     </ul>

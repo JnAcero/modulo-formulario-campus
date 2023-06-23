@@ -240,3 +240,10 @@ CREATE TABLE nivel_campers (
 );
 
 ALTER TABLE personas ADD direccion VARCHAR(50) NOT NULL;
+CREATE TABLE nivel_campers (
+    id_nivel_camper INT NOT NULL AUTO_INCREMENT,
+    nivel_conocimiento VARCHAR(50),
+    id_salon INT(11),
+    CONSTRAINT PK_NivelCampers PRIMARY KEY (id_nivel_camper),
+    CONSTRAINT FK_NivelSalon FOREIGN KEY (id_salon) REFERENCES salones(id_salon)
+);

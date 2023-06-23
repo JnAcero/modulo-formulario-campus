@@ -148,5 +148,41 @@ class Trainer extends Conection{
             $e->getMessage();
         }
     }
+    public function editarInfoTrainer($id){
+        try{
+        $sql="UPDATE personas SET `id_persona`=?,`tipo_id`=?,`foto_persona`=?,`persona_nombre`=?,`persona_apellido`=?,`fecha_nacimiento`=?,`email`=?,`telefono`=?,`id_ciudad`=?,`id_eps`=?,`id_rol`=?,`direccion`=? WHERE id_persona=$id";
+        $stm = $this->cnx->prepare($sql);
+        $stm->execute([$this->id_persona, $this->tipo_id, $this->picture, $this->names,$this->lastnames,$this->fecha_nacimineto, $this->email, $this->telefono, $this->city,$this->eps,$this->rol,$this->direccion]);
+        }catch(Exception $e){
+            $e->getMessage();
+        }
+    }
+    public function editarDataTrainer($id){
+        try {
+            $sql="UPDATE trainer SET `id_persona`=?,`id_arl`=? WHERE id_trainer=$id";
+            $stm = $this->cnx->prepare($sql);
+            $stm->execute([$this->id_persona, $this->arl]);
+        } catch(Exception $e){
+            $e->getMessage();
+        }
+    }
    
 }
+// $trainer=new Trainer();
+// $trainer->setId_persona('1193427712');
+//         $trainer->setTipo_id('CC');
+//         $trainer->setPicture('trainer.jpg');
+//         $trainer->setFecha_nacimineto('2000/11/10');
+//         $trainer->setNames('Juancho');
+//         $trainer->setLastnames('Acero');
+//         $trainer->setEmail('pruea@gmail.com');
+//         $trainer->SetDireccion('calle 19');
+//         $trainer->setTelefono('123');
+//         $trainer->setCity(1);
+//         $trainer->setRol(2);
+//         $trainer->setEps(1);
+//         $trainer->setName_contacto('Pedro');
+//         $trainer->setTelefono_contacto('234');
+//         $trainer->setArl(1);
+
+//         $trainer->editarInfoTrainer();
