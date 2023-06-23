@@ -98,7 +98,7 @@ class Trainer extends Conection{
     public function insertTablaPersona(){
        
         try {
-            $sql ="INSERT INTO personas(id_persona,tipo_id, foto_persona, persona_nombre, persona_apellido, fecha_nacimiento, email, telefono, id_ciudad, id_eps, id_rol,direccion) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";   
+        $sql ="INSERT INTO personas(id_persona,tipo_id, foto_persona, persona_nombre, persona_apellido, fecha_nacimiento, email, telefono, id_ciudad, id_eps, id_rol,direccion) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";   
          $stm = $this->cnx->prepare($sql);
         $stm->execute([$this->id_persona, $this->tipo_id, $this->picture, $this->names,$this->lastnames,$this->fecha_nacimineto, $this->email, $this->telefono, $this->city,$this->eps,$this->rol,$this->direccion]);
      
